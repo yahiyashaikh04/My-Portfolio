@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100">
+  <!-- Navbar -->
+  <header class="absolute top-0 right-0 p-6 flex space-x-6 items-center">
+    <a href="/about" class="text-black hover:text-gray-300 ">About me</a>
+    <a href="/skill" class="text-black hover:text-gray-300 ">Skills</a>
+    <a href="/project" class="text-black hover:text-gray-300  ">My Project</a>
+    <a href="/contact" class="px-4 py-2 bg-white rounded-full shadow hover:bg-gray-200 font-bold">CONTACT ME</a>
+  </header>
+
+  <!-- Main Section -->
+  <section class="flex h-screen">
+    <!-- Left Part -->
+    <div class="w-1/2 bg-gray-200 flex flex-col justify-center items-start pl-20">
+      <div class="mb-6">
+        <div class="text-lg text-gray-700">Hi, I am</div>
+        <h1 class="text-4xl font-bold">Yahiya Shaikh</h1>
+        <p class="text-gray-500 mt-2">Full-Stack Developer / Python Developer</p>
+      </div>
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-4">
+        <a href="https://github.com/yahiyashaikh04" class="p-3 bg-white shadow rounded hover:bg-gray-100">Git-Hub
+        </a>
+        <a href="https://www.linkedin.com/jobs/?mcid=7364684663652581377&src=go-pa&trk=sem-ga_campid.22935434840_asid._crid._kw._d.c_tid._n.x_mt._geo.9062089&cid=&gclsrc=aw.ds&gad_source=1&gad_campaignid=22929535599&gbraid=0AAAAADK8eFjkeN9xgROm268yTXBfSZPKg&gclid=CjwKCAjwisnGBhAXEiwA0zEOR257AMaq36G0GUcAoLEG4QqvMIcPekAJUrUTOLoRFqrx90_YPZaO7BoCBHcQAvD_BwE" class="p-3 bg-white shadow rounded hover:bg-gray-100">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- Right Part -->
+    <div class="w-1/2 bg-gray-400 flex justify-center items-center">
+     <img src="{{ url_for('static', filename='myphoto.png') }}" 
+       alt="My Photo"
+       class="w-80 h-80 object-cover rounded-full border-4 border-red-800 shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out bg-blue-300">
+    </div>
+  </section>
+</body>
+</html>
